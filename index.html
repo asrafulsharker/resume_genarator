@@ -55,11 +55,27 @@
                     <textarea  placeholder="Enter Hare" class="form-control"></textarea>
                 </div>
 
-                <div class="form-group mt-2">
+                <div class="form-group mt-2" id="we">
                     <label for="" >Work Experience</label>
                     <textarea  placeholder="Enter Hare" class="form-control wefield"></textarea>
+                    <div class="container text-center mt-3 " id="weAddButton">
+                        <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group mt-2" id="aq">
+                    <label for="" >Academic Qualification</label>
+                    <textarea  placeholder="Enter Hare" class="form-control eqfield"></textarea>
+                    <div class="container text-center mt-3" id="aqAddButton">
+                        <button onclick="addNewAQField()"  class="btn btn-primary btn-sm">Add</button>
+                    </div>
                 </div>
             </div>
+        </div>
+        <div class="container text-center mt-3">
+            <button class="btn btn-primary btn-lg">Generate CV</button>
         </div>
     </div>
 
