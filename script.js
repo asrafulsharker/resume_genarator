@@ -32,3 +32,29 @@ function addNewAQField(){
 
     aqOb.insertBefore(newNode,aqAddButtonOb);
 }
+
+
+// generating cv 
+
+
+function generateCV(){
+    // console.log("Fuck U")
+
+    let nameField=document.getElementById('namefield').value;
+
+    let nameT1 = document.getElementById('nameT1')
+    nameT1.innerHTML = nameField;
+
+    // dirtect
+
+    document.getElementById('nameT2').innerHTML = nameField;
+
+
+    // contact 
+
+    document.getElementById("contactT").innerHTML = document.getElementById("contactfield").value;
+
+    // address
+
+    document.getElementById("addressT").innerHTML = document.getElementById("addressfield").value;
+}
