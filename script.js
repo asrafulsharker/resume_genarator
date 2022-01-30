@@ -57,4 +57,53 @@ function generateCV(){
     // address
 
     document.getElementById("addressT").innerHTML = document.getElementById("addressfield").value;
+
+    document.getElementById("fbT").innerHTML = document.getElementById("fbfield").value;
+
+
+    document.getElementById("instaT").innerHTML = document.getElementById("instafield").value;
+
+
+    document.getElementById("linkedT").innerHTML = document.getElementById("linkedfield").value;
+
+    // objecttive
+    document.getElementById("objectiveT").innerHTML = document.getElementById("objectivefield").value;
+
+
+    // we 
+
+    let wes=document.getElementsByClassName('wefield')
+
+    let str=''
+
+    for(let e of wes)
+    {
+        str=str +`<li> ${e.value}</li>`;
+    }
+
+    document.getElementById("weT").innerHTML = str;
+
+
+    // aq 
+
+    let aqs=document.getElementsByClassName('eqfield')
+
+    let str1=''
+
+    for(let e of aqs)
+    {
+        str1=str1 +`<li> ${e.value}</li>`;
+    }
+
+    document.getElementById("aqT").innerHTML = str1;
+
+    document.getElementById('cv-form').style.display='none';
+    document.getElementById('cv-template').style.display='block';
+}
+
+
+// print cv 
+
+function printCV(){
+    window.print();
 }
