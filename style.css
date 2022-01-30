@@ -1,5 +1,9 @@
 #cv-form{
     /* display: none; */
+   
+}
+body{
+    background-color: blanchedalmond;
 }
 
 #cv-template{
@@ -14,6 +18,6 @@
 }
 
 .background{
-    background-color: aqua;
+    background-color: rgb(161, 205, 255);
 
 }
