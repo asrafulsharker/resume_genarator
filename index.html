@@ -9,7 +9,7 @@
     <title>Resume Generator</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="cv-form">
         <h1 class="text-center my-2"> Resume Generator</h1>
         <div class="row">
             <div class="col-md-6">
@@ -27,7 +27,7 @@
 
                 <div class="form-group mt-2">
                     <label for="addressfield" >Your Address</label>
-                    <textarea id="addressfield" placeholder="Enter Hare" class="form-control"></textarea>
+                    <textarea id="addressfield" placeholder="Enter Hare" class="form-control" rows="5"></textarea>
                 </div>
 
 
@@ -42,8 +42,8 @@
                     <input type="text" id="instafield" placeholder="Enter Hare" class="form-control">
                 </div>
                 <div class="form-group mt-2">
-                    <label for="linkdinfield" >Linkdin Link</label>
-                    <input type="text" id="linkdinfield" placeholder="Enter Hare" class="form-control">
+                    <label for="linkedfield" >Linkdin Link</label>
+                    <input type="text" id="linkedfield" placeholder="Enter Hare" class="form-control">
                 </div>
             </div>
             <div class="col-md-6">
@@ -52,7 +52,7 @@
 
                 <div class="form-group mt-2">
                     <label for="" >Objective</label>
-                    <textarea  placeholder="Enter Hare" class="form-control"></textarea>
+                    <textarea id="objectivefield"  placeholder="Enter Hare" class="form-control"></textarea>
                 </div>
 
                 <div class="form-group mt-2" id="we">
@@ -67,7 +67,7 @@
 
                 <div class="form-group mt-2" id="aq">
                     <label for="" >Academic Qualification</label>
-                    <textarea  placeholder="Enter Hare" class="form-control eqfield"></textarea>
+                    <textarea  placeholder="Enter Hare" class="form-control eqfield" rows="3"></textarea>
                     <div class="container text-center mt-3" id="aqAddButton">
                         <button onclick="addNewAQField()"  class="btn btn-primary btn-sm">Add</button>
                     </div>
@@ -75,9 +75,88 @@
             </div>
         </div>
         <div class="container text-center mt-3">
-            <button class="btn btn-primary btn-lg">Generate CV</button>
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
         </div>
     </div>
+
+
+    <!-- cv template  -->
+
+    <div class="container" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- first col  -->
+                <img src="./img/profile-icon.png" alt="profile-img" class="img-fluid myimg">
+                <div class="container">
+                    <p id="nameT1">Asraful Sharker Nirob</p>
+                    <p id="contactT">+088 1628560659</p>
+                    <p id="addressT">1510/Bhaberchar , Gazaria, Munshigonj</p>
+                    <hr>
+                    <p><a id="fbT" href="#111">https://www.Facebook.com/asrafulsharker</a></p>
+                    <p><a id="instaT" href="#111">https://www.instagram.com/asrafulsharker</a></p>
+                    <p><a id="linkedT" href="#111">https://www.Linkdin.com/asrafulsharker</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- second col  -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;">MD Asraful Sharker Nirob</h1>
+                <!-- objective card  -->
+
+               <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Objective</h3>
+                </div>
+                <div class="card-body">
+                    <p id="objectiveT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime aliquid Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae sint velit ad voluptate asperiores saepe illum ex tempora ipsa, optio eaque nihil error beatae fugit in molestiae atque. Consectetur, possimus. labore tempore incidunt minima eligendi quam maiores officiis esse beatae!</p>
+                    
+                </div>
+               </div>
+
+               <!-- work experience  -->
+
+               <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Work Experience</h3>
+                </div>
+                <div class="card-body">
+                  <ul id="weT">
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      
+                  </ul>
+                    
+                </div>
+               </div>
+               
+
+               <!-- academic qualification  -->
+
+               <div class="card mt-4">
+                <div class="card-header background">
+                    <h3>Academic Qualification</h3>
+                </div>
+                <div class="card-body">
+                  <ul id="aqT">
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, suscipit!</li>
+                      
+                  </ul>
+                    
+                </div>
+               </div>
+               
+               <div class="container mt-3 text-center">
+                   <button onclick="printCV()" class="btn background">
+                       Print CV
+                   </button>
+
+               </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="./script.js"></script>
